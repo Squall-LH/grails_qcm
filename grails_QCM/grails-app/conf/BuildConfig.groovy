@@ -13,6 +13,11 @@ grails.war.resources = { stagingDir, args ->
 		 tofile: "${stagingDir}/META-INF/context.xml")
 }
 
+coverage {
+	enabledByDefault = false
+	xml = true
+}
+
 grails.project.dependency.resolution = {
 	// inherit Grails' default dependencies
 	inherits("global") {
