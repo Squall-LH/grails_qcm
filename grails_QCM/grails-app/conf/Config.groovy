@@ -101,7 +101,7 @@ log4j = {
 	appenders {
 			console name: "stdout"
 			file name:'file', file:'mylog.log', threshold: org.apache.log4j.Level.DEBUG
-			appender new org.apache.log4j.net.SocketAppender(name:'socketAppender', port:4445, remoteHost:"localhost", reconnectionDelay:3000) 
+			appender new org.apache.log4j.net.SocketAppender(name:'socketAppender', port:4445, remoteHost:"localhost", reconnectionDelay:60000) 
 	}
 	root {
 		warn()
