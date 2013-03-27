@@ -6,7 +6,12 @@ grails.project.target.level = 1.7
 grails.project.source.level = 1.7
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
-grails.plugin.location.tomcat_jdbc = 'D:/Projet/grails-jdbc-pool-master'
+//grails.plugin.location.tomcat_jdbc = 'D:/Projet/grails-jdbc-pool-master'
+
+grails.war.resources = { stagingDir, args ->
+	copy(file: "grails-app/conf/context.xml",
+		 tofile: "${stagingDir}/META-INF/context.xml")
+}
 
 grails.project.dependency.resolution = {
 	// inherit Grails' default dependencies
