@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.infotel</groupId>
+	<artifactId>grails_qcm</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+	<name>Grails QCM</name>
+	<build>
+		<sourceDirectory>grails-app</sourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<excludes>
+						<exclude>**/*.*</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.1</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>grails-app</source>
+								<source>src/groovy</source>
+								<source>src/java</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<properties>
+		<sonar.language>grvy</sonar.language>
+		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+		<sonar.surefire.reportsPath>target/test-reports</sonar.surefire.reportsPath>
+		<sonar.cobertura.reportPath>targtet/test-reports/cobertura/coverage.xml</sonar.cobertura.reportPath>
+		<sonar.phase>generate-sources</sonar.phase>
+		<sonar.jdbc.url>jdbc:mysql://localhost/sonar</sonar.jdbc.url>
+		<sonar.jdbc.driver>com.mysql.jdbc.Driver</sonar.jdbc.driver>
+		<sonar.jdbc.username>sonar</sonar.jdbc.username>
+		<sonar.jdbc.password>sonar</sonar.jdbc.password>
+		<!-- SERVER ON A REMOTE HOST -->
+		<sonar.host.url>http://localhost:9000</sonar.host.url>
+	</properties>
+</project>
