@@ -13,6 +13,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				 <version>3.0</version>
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>
@@ -48,7 +49,7 @@
 		<sonar.language>grvy</sonar.language>
 		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 		<sonar.surefire.reportsPath>target/test-reports</sonar.surefire.reportsPath>
-		<sonar.cobertura.reportPath>targtet/test-reports/cobertura/coverage.xml</sonar.cobertura.reportPath>
+		<sonar.cobertura.reportPath>target/test-reports/cobertura/coverage.xml</sonar.cobertura.reportPath>
 		<sonar.phase>generate-sources</sonar.phase>
 		<sonar.jdbc.url>jdbc:mysql://localhost/sonar</sonar.jdbc.url>
 		<sonar.jdbc.driver>com.mysql.jdbc.Driver</sonar.jdbc.driver>
