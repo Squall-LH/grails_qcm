@@ -41,6 +41,8 @@ class AuthController {
             SecurityUtils.subject.login(authToken)
 
             log.info "Redirecting to '${targetUri}'."
+			session["name"] = ShiroUser.findByUsername(SecurityUtils.subject.principal).user.name;
+			session["firstName"] = ShiroUser.findByUsername(SecurityUtils.subject.principal).user.firstName;
             redirect(uri: targetUri)
         }
         catch (AuthenticationException ex){

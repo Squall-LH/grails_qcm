@@ -48,11 +48,26 @@ body {
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
 	   -moz-box-shadow: 0 0 0.3em #255b17;
 	-webkit-box-shadow: 0 0 0.3em #255b17;
-	        box-shadow: 0 0 0.3em #255b17;
+	        box-shadow: 0 0 0.3em #0E2269;
 }
 
-#grailsLogo {
-	background-color: #abbf78;
+#header {
+	background-color: #ffffff;
+	/*border-style: solid;
+	border-color: #0E2269; 
+	border-width: 1px;*/
+	box-shadow: 0 0 0.3em #0E2269;
+	height: 60px;
+}
+
+#headerContent {
+	margin: 5px;
+	float: left;
+}
+
+#logo {
+	margin: 5px;
+	float: right;
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
@@ -99,6 +114,7 @@ img {
 }
 
 .marged {
+	padding: 1em;
 	margin: 2em;
 }
 
@@ -117,7 +133,7 @@ img {
 }
 
 .footer {
-	background: #abbf78;
+	background: #ffffff;
 	color: #000;
 	clear: both;
 	font-size: 0.8em;
@@ -127,7 +143,7 @@ img {
 }
 
 .footer a {
-	color: #255b17;
+	color: #0E3589;
 }
 
 .spinner {

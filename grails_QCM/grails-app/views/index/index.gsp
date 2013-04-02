@@ -150,7 +150,9 @@ p {
 			</g:each>
 		</ul>
 		</div>
-
+		
+		<h2>Tester un cas pratique</h2>
+		<g:link controller="PracticalCase" action="index">Cas Pratique</g:link>
 	</div>
 </body>
 </html>
