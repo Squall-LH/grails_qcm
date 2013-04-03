@@ -204,12 +204,10 @@ class RunQuizzController {
 				
 				if(null == sess.save()) {
 					log.error("Could not save session.");
+					sess.errors?.allErrors?.each{
+						log.error(it);
+					};
 					throw new Exception("Could not save session.");
-					// Lancer une exception ou qq chose du genre
-				
-						sess.errors?.allErrors?.each{
-							println it
-						};
 				}
 				
 				[score: score, total: questionList.size()]
